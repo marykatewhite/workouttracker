@@ -4,6 +4,7 @@ const Workout = require("../models/workout.js");
 router.get("/api/workouts", function(req, res) {
   Workout.find({})
     .then(function(workouts) {
+      console.log(workouts);
       res.json(workouts);
     })
     .catch(function(err) {
